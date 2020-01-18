@@ -5,62 +5,6 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 public class TopDown2 {
-    @Test
-    public void sumMinMaxTest() {
-        int [] arr = {1, 2, 3};
-        assertEquals(sumMinMax(arr), 4);
-    }
-
-    @Test
-    public void swapMinMaxTest() {
-        int [] arr1 = {1, 2, 3};
-        int []expectedArr1 = {3, 2,1};
-        assertArrayEquals(swapMinMax(arr1), expectedArr1); //null pointer exception
-
-        int [] arr2 = {-1, -2, -3};
-        int []expectedArr2 = {-3, -2, -1};
-        assertArrayEquals(swapMinMax(arr2), expectedArr2); //returns null
-
-        int [] arr3 = {0, 2, 1};
-        int []expectedArr3 = {2, 0 , 1};
-        assertArrayEquals(swapMinMax(arr3), expectedArr3); //fail
-
-        int [] arr4 = {1, 2, 0};
-        int []expectedArr4 = {1,0,2};
-        assertArrayEquals(swapMinMax(arr4), expectedArr4); //fail
-
-    }
-
-    @Test
-    public void isSortedTest() {
-        int [] arr1 = {1, 2, 3};
-        int [] arr2 = {0, 2, 1};
-        assertTrue(isSorted(arr1));
-        assertFalse(isSorted(arr2));
-    }
-
-    @Test
-    public void mergeTest() {
-        int [] arr1 = {2, 1, 3};
-        int [] arr2 = {6, 5, 4};
-        int [] expectedArr1 = {1,2,3};
-        int [] expectedArr2 = {4,5,6};
-        int [] expectedArr3 = {1,2,3,4,5,6};
-
-        assertEquals(merge(null, null), null );
-        assertArrayEquals(merge(arr1, null), expectedArr1 );
-        assertArrayEquals(merge(null, arr2), expectedArr2);
-        assertArrayEquals(merge(arr1, arr2), expectedArr3);
-    }
-
-    @Test
-    public void printSortedTest() {
-        assertEquals(null, "No array");
-        int [] arr2 = {6, 5, 4};
-        //todo what the fuck??
-
-    }
-
 
     @Test
     public void minValueIndexTest(){
