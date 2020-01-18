@@ -1,9 +1,6 @@
 import org.junit.Test;
-
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-
-import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 public class PrintSortedTopDown {
@@ -13,11 +10,26 @@ public class PrintSortedTopDown {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
         printSorted(null);
+        String expectedOutput  = "No array\n";
+        assertEquals(expectedOutput, outContent.toString());
 
-        String expectedOutput1  = "No array\n";
-        assertEquals(expectedOutput1, outContent.toString());
+        outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+        int [] arr = {2,1,3};
+        printSorted(arr);
+        expectedOutput  = "2 1 3\n1 2 3\n2 1 3\n";
+        assertEquals(expectedOutput, outContent.toString());
 
     }
+
+    /* Prints arrays in the following order:
+     * arr
+     * sorted arr
+     * arr
+     *
+     * if arr is null prints:
+     * No array
+     */
     public static void printSorted(int[] arr) {
         if (arr==null)
             System.out.println("No array");

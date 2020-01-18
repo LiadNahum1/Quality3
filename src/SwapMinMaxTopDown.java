@@ -7,15 +7,15 @@ public class SwapMinMaxTopDown {
     public void swapMinMaxTest() {
         int [] arr1 = {1, 2, 3};
         int []expectedArr1 = {3, 2,1};
-        assertArrayEquals(swapMinMax(arr1), expectedArr1); //null pointer exception
+        assertArrayEquals(expectedArr1, swapMinMax(arr1)); //null pointer exception
 
         int [] arr2 = {-1, -2, -3};
         int []expectedArr2 = {-3, -2, -1};
-        assertArrayEquals(swapMinMax(arr2), expectedArr2); //returns null
+        assertArrayEquals(expectedArr2, swapMinMax(arr2)); //returns null
 
         int [] arr3 = {0, 2, 1};
         int []expectedArr3 = {2, 0 , 1};
-        assertArrayEquals(swapMinMax(arr3), expectedArr3); //fail
+        assertArrayEquals(expectedArr3, swapMinMax(arr3)); //fail
 
     }
 
