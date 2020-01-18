@@ -6,7 +6,7 @@ public class SumMinMaxTopDown {
     @Test
     public void sumMinMaxTest() {
         int [] arr = {1, 2, 3};
-        assertEquals(sumMinMax(arr), 4);
+        assertEquals(4, sumMinMax(arr));
     }
 
     // Returns sum of minimum and maximum values in the array

@@ -12,10 +12,10 @@ public class MergeTopDown {
         int [] expectedArr2 = {4,5,6};
         int [] expectedArr3 = {1,2,3,4,5,6};
 
-        assertEquals(merge(null, null), null );
-        assertArrayEquals(merge(arr1, null), expectedArr1 );
-        assertArrayEquals(merge(null, arr2), expectedArr2);
-        assertArrayEquals(merge(arr1, arr2), expectedArr3);
+        assertEquals(null, merge(null, null) );
+        assertArrayEquals(expectedArr1, merge(arr1, null) );
+        assertArrayEquals(expectedArr2, merge(null, arr2));
+        assertArrayEquals(expectedArr3, merge(arr1, arr2));
     }
 
     // Merges two arrays "ar1" and "ar2" into one sorted array and returns it
