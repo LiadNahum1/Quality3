@@ -1,17 +1,18 @@
+package topDown;
+
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class maxValueTopDown {
-
+public class minValueTopDown {
     @Test
-    public void maxValueTest(){
+    public void minValueTest(){
         int [] arr = {2, 3, 4};
-        assertEquals(maxValue(arr), 4); //pass
-        assertEquals(maxValue(null), -1); //null pointer exception
+        assertEquals(minValue(arr), 2); //fail
+        assertEquals(minValue(null), -1); //null pointer exception
     }
 
-    public static int maxValue(int[] arr) {
+    public static int minValue(int[] arr) {
         int ind = maxValueIndexStub(arr);
         return arr[ind];
     }
